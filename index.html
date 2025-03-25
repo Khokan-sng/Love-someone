@@ -6,7 +6,7 @@
     <title>Animated Birthday Message</title>
     <style>
         body {
-            display: flex;
+            display: flex; gap: 5px;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -78,6 +78,7 @@
         const container = document.getElementById("message");
         
         message.split("").forEach((letter, index) => {
+            if (letter === ' ') letter = ' ';
             const span = document.createElement("span");
             span.textContent = letter;
             span.classList.add("letter");
