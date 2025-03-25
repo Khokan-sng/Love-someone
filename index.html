@@ -81,8 +81,9 @@
         }
         setInterval(createHeart, 500);
         
-        const message = window.innerWidth < 600 ? "Happy Birthday
-Dhiraj Sir" : "Happy Birthday Dhiraj Sir";
+        const message = window.innerWidth < 600 
+            ? ["Happy Birthday", "Dhiraj Sir"] 
+            : ["Happy Birthday Dhiraj Sir"];
         const emoji = "🎉🎂";
         const container = document.getElementById("message");
         
