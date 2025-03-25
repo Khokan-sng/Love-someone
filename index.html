@@ -10,7 +10,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: navy;
+            background: linear-gradient(270deg, red, blue, green, yellow);
+            background-size: 400% 400%;
+            animation: bgAnimation 10s infinite alternate;
             color: white;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
@@ -59,6 +61,11 @@
             0% { transform: translateY(100vh) rotate(-45deg); opacity: 1; }
             100% { transform: translateY(-10vh) rotate(-45deg); opacity: 0; }
         }
+    @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
     </style>
 </head>
 <body>
@@ -74,7 +81,8 @@
         }
         setInterval(createHeart, 500);
         
-        const message = "Happy Birthday Dhiraj Sir 🎉🎊😀";
+        const message = "Happy Birthday Dhiraj Sir";
+        const emoji = "🎉🎂";
         const container = document.getElementById("message");
         
         message.split("").forEach((letter, index) => {
@@ -83,7 +91,17 @@
             span.textContent = letter;
             span.classList.add("letter");
             span.style.animationDelay = `${index * 0.2}s`;
-            container.appendChild(span);
+                        container.appendChild(span);
+            if (index === message.length - 1) {
+                setTimeout(() => {
+                    const emojiSpan = document.createElement("div");
+                    emojiSpan.textContent = emoji;
+                    emojiSpan.style.fontSize = "50px";
+                    emojiSpan.style.textAlign = "center";
+                    emojiSpan.style.marginTop = "10px";
+                    container.appendChild(emojiSpan);
+                }, (message.length + 1) * 200);
+            }
         });
     </script>
 </body>
