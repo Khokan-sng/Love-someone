@@ -37,7 +37,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background-color: red;
+            background-color: transparent; font-size: 24px;
             transform: rotate(-45deg);
             animation: floatUp 5s infinite ease-in-out;
         }
@@ -85,7 +85,7 @@
         const message = window.innerWidth < 600 
             ? ["Happy Birthday", "Dhiraj Sir"] 
             : ["Happy Birthday Dhiraj Sir"];
-        const emoji = "🤩🎈";
+        const emoji = "🎉";
         const container = document.getElementById("message");
         
         message.join(' ').split('').forEach((letter, index) => {
