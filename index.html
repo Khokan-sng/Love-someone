@@ -87,7 +87,7 @@
         const emoji = "🎉🎂";
         const container = document.getElementById("message");
         
-        message.split("").forEach((letter, index) => {
+        message.join(' ').split('').forEach((letter, index) => {
             if (letter === ' ') letter = ' ';
             const span = document.createElement("span");
             span.textContent = letter;
