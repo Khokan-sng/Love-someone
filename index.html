@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message for Sandhya</title>
-    <script>
-        window.onload = function() {
-            alert("I LOVE KRISHNA BHAGWAN");
-        };
-    </script>
+    <title>Animated Name</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            animation: fadeInOut 2s infinite;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin-top: 20%;">I LOVE KRISHNA BHAGWAN</h1>
+    <h1>I LOVE Krishna Bhagwan</h1>
 </body>
 </html>
